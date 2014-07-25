@@ -1015,6 +1015,7 @@ byte MFRC522::PICC_GetType(byte sak		///< The SAK byte returned from PICC_Select
 	
 	switch (sak) {
 		case 0x09:	return PICC_TYPE_MIFARE_MINI;	break;
+		case 0x88:	// PICC_TYPE_MIFARE_1K_CLASSIC
 		case 0x08:	return PICC_TYPE_MIFARE_1K;		break;
 		case 0x18:	return PICC_TYPE_MIFARE_4K;		break;
 		case 0x00:	return PICC_TYPE_MIFARE_UL;		break;
